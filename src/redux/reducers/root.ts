@@ -1,9 +1,14 @@
-import { GET_PRODUCTS_REQUEST, GET_PRODUCTS_REQUEST_SUCCESS, GET_PRODUCTS_REQUEST_FAILED } from './../actions/products-actions';
+import { 
+  GET_PRODUCTS_REQUEST, 
+  GET_PRODUCTS_REQUEST_SUCCESS, 
+  GET_PRODUCTS_REQUEST_FAILED, 
+  SAVE_FILTERED_PRODUCTS } from './../actions/products-actions';
 import { TProductsActions } from '../actions/products-actions';
 import { combineReducers } from "redux";
 
 export type TProductsState = {
   products: Array<any>;
+  filteredProducts: Array<any>;
 
   getProdactsRequest: boolean;
   getProdactsRequestSuccess: boolean;
@@ -12,6 +17,7 @@ export type TProductsState = {
 
 const productsInitialState: TProductsState = {
   products: [],
+  filteredProducts: [],
 
   getProdactsRequest: false,
   getProdactsRequestSuccess: false,
@@ -34,6 +40,7 @@ export const productsReducer = (state = productsInitialState, action: TProductsA
         getProdactsRequest: false,
         getProdactsRequestSuccess: true,
         products: action.products,
+        filteredProducts: action.products,
       }
     }
     case GET_PRODUCTS_REQUEST_FAILED: {
@@ -41,6 +48,12 @@ export const productsReducer = (state = productsInitialState, action: TProductsA
         ...state,
         getProdactsRequest: false,
         getProdactsRequestFailed: true,
+      }
+    }
+    case SAVE_FILTERED_PRODUCTS: {
+      return {
+        ...state,
+        filteredProducts: action.products
       }
     }
     

@@ -9,13 +9,22 @@
   flex-flow: column;
   font-family: 'Open Sans';
   padding: 4.25vw;
+  font-size: 3vw;
   @media screen and (min-width: 426px) {
     padding: 2.4vw;
+    font-size: 0.8vw;
   }
 }
 
 .wrapper h1 {
+  font-size: 2.66em;
+  margin: 0;
+}
 
+.wrapper p {
+  font-size: 1.16em;
+  color: #808080;
+  margin: 24px 0 24px 0;
 }
 
 .productsWrapper {
@@ -25,6 +34,17 @@
     flex-flow: row wrap;
     justify-content: space-between;
   }
+}
+
+.checkboxLabel {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.checkbox {
+  margin-right: 5px;
 }
 
 
