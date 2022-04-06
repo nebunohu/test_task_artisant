@@ -1,0 +1,30 @@
+$mobile-item-width: 91.5vw;
+$desktop-item-width: 22vw;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  max-width: $mobile-item-width;
+  height: $mobile-item-width * 1.58;
+  margin: 0 auto;
+
+  background: #FFFFFF;
+  box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.07);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 4.25vw;
+
+  
+
+  @media screen and (min-width: 426px) {
+    width: $desktop-item-width;
+    max-width: 22vw;
+    height: $desktop-item-width * 1.58;
+    margin-bottom: 2.4vw;
+
+    font-size: 0.8vw;
+  }
+}

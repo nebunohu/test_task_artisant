@@ -1,0 +1,13 @@
+.productsWrapper {
+  display: flex;
+  flex-flow: column;
+  box-sizing: border-box;
+  gap: 4.25vw;
+
+  @media screen and (min-width: 426px) {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 2.4vw;
+    width: 95.2vw;
+  }
+}

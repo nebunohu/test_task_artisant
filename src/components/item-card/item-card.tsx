@@ -21,7 +21,7 @@ const ItemCard: FC<TItemCardProps> = ({ product }) => {
         {isImage ?
             <img className={`${styles.avatar}`} src={`${API_FILES_URL}/${product.avatar.original}`} alt='' />
           :
-            <video className={`${styles.avatar}`} src={`${API_FILES_URL}/${product.avatar.original}`} />
+            <video playsInline autoPlay loop muted className={`${styles.avatar}`} src={`${API_FILES_URL}/${product.avatar.original}`} />
         }
         <div className={`${styles.lowerText}`}>
           {product.name}
